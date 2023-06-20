@@ -26,4 +26,5 @@ for submission in subreddit.stream.submissions(skip_existing=True):
     if(submission.link_flair_text == "Humor & Memes"): 
         if(not(((tim ==  1) and (sec >=21)) or (tim == 2) or (tim == 3) or ((tim == 4) and (sec < 6)))):
             submission.mod.remove()
+            submission.mod.lock()
             submission.mod.send_removal_message('Rule 8: Humor & Meme posts will be limited to weekends. Humor Weekend Starts at Friday, 5:00 PM Eastern and ends Monday, 2 AM Eastern. Humor posts outside this time frame will be removed. Please resubmit your humor post on the weekend. If you want to know why we have this rule here’s the [link](https://www.reddit.com/r/ClashOfClans/comments/kollta/humor_weekends_coming_to_2021/). I am a bot, and this action was performed automatically. [Please contact the moderators of this subreddit if you have any questions or concerns](https://www.reddit.com/message/compose/?to=/r/ClashOfClans).', title='ignored', type='public')
